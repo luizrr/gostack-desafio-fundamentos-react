@@ -29,7 +29,7 @@ const Import: React.FC = () => {
 
     const file = uploadedFiles[0];
     data.append('file', file.file, file.name);
-    console.log(data);
+
     try {
       await api.post('/transactions/import', data);
       history.push('/');
